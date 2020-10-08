@@ -11,9 +11,7 @@ class App extends Component{
   }
   componentDidMount(){
     let headers = new Headers();
-    headers.append('Access-Control-Allow-Origin', 'http://localhost:3000');
-    headers.append('Access-Control-Allow-Credentials', 'true');
-    headers.append('GET', 'POST', 'OPTIONS');
+    headers.append('Access-Control-Allow-Origin', '*');
     fetch('https://inventoryappdemo.herokuapp.com/Controllers/HomeController/Init')
       .then(res => res.json())
       .then(json => {
