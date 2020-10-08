@@ -6,11 +6,27 @@
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
-    />
+      content="My Inventory React App"
+    /> 
     <title>Inventory App</title>
   </head>
   <body>
+    <header>
+      <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+          <div class="container">
+              <a class="navbar-brand" title="Home">Inventory App</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                      aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <!--<div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                  <ul class="navbar-nav">
+                      <li class="nav-item btn btn-sm" style="border: 1px solid black;cursor:pointer" onclick="document.getElementById('newFile').click();"><input class="nav-link text-dark" type="file" style="display:none" id="newFile" /><i class="fa fa-upload" title="Import CSV"></i> Upload CSV</li>
+                  </ul>
+              </div>-->
+          </div>
+      </nav>
+  </header>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
