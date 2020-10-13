@@ -121,35 +121,35 @@ class App extends Component{
         <div className="container">                    
           <form className="form-group">
             <input placeholder="Item Name" type={String} ref={searchInput => this.searchInput = searchInput} style={{display: "inline-block", paddingBottom:"4px"}} />
-            <button className="btn btn-sm btn-info" onClick={this.getMaxPrice}>Get Max Price</button>
-            <button className="btn btn-sm btn-default" style={{border: "1px solid black", float: "right"}} onClick={this.getAllMaxPrice}>Get All Max Prices</button>            
+            <button className="btn btn-sm btn-info" onClick={this.getMaxPrice}>Get Max Cost</button>
+            <button className="btn btn-sm btn-default" style={{border: "1px solid black", float: "right"}} onClick={this.getAllMaxPrice}>All Max Costs</button>            
           </form>
-          <table className="table table-striped" style={{tableLayout: "fixed"}}>
-            <thead>
-            <tr>
-              <th width="7.5%"><button className="btn btn-sm btn-success" title="Add" onClick={this.addRow}><FontAwesomeIcon icon={faPlus} title="Add"/></button></th>              
-              <th wdith="10%">Id</th>
-              <th width="55%">Name</th>
-              <th width="25%">Cost</th>
-              <th width="7.5%"><button className="btn btn-sm btn-primary" title="Refresh" onClick={this.init}><FontAwesomeIcon icon={faSync} title="Refresh"/></button></th>
-            </tr>
-            </thead>
-            <tbody>
-            {
-              items.map(item => {
-                return(
-                  <ItemRow
-                    key={item.id}
-                    {...item}
-                    deleteRow={this.deleteRow}
-                    updateRow={this.updateRow}
-                  />
-                );
-              })
-            }
-            </tbody>
-          </table>
-        </div>
+            <table className="table table-striped" style={{tableLayout: "fixed"}}>
+              <thead>
+              <tr>
+                <th style={{width: "5%"}}><button className="btn btn-sm btn-success" title="Add" onClick={this.addRow}><FontAwesomeIcon icon={faPlus} title="Add"/></button></th>              
+                <th style={{width: "5%"}}>Id</th>
+                <th style={{width: "45%"}}>Name</th>
+                <th style={{width: "40%"}}>Cost</th>
+                <th style={{width: "5%"}}><button className="btn btn-sm btn-primary" title="Refresh" onClick={this.init}><FontAwesomeIcon icon={faSync} title="Refresh"/></button></th>
+              </tr>
+              </thead>
+              <tbody>
+              {
+                items.map(item => {
+                  return(
+                    <ItemRow
+                      key={item.id}
+                      {...item}
+                      deleteRow={this.deleteRow}
+                      updateRow={this.updateRow}
+                    />
+                  );
+                })
+              }
+              </tbody>
+            </table>
+          </div>
       );
     }
   }
