@@ -129,7 +129,7 @@ class App extends Component{
               <tr>
                 <th style={{width: "5%"}}><button className="btn btn-sm btn-success" title="Add" onClick={this.addRow}><FontAwesomeIcon icon={faPlus} title="Add"/></button></th>              
                 <th style={{width: "5%"}}>Id</th>
-                <th style={{width: "45%"}}>Name</th>
+                <th style={{width: "40%"}}>Name</th>
                 <th style={{width: "40%"}}>Cost</th>
                 <th style={{width: "5%"}}><button className="btn btn-sm btn-primary" title="Refresh" onClick={this.init}><FontAwesomeIcon icon={faSync} title="Refresh"/></button></th>
               </tr>
