@@ -22,11 +22,11 @@ class ItemRow extends Component {
         var {id, name, cost } = this.props;
         return (
             <tr key={id}>
-                <td><button className="btn btn-sm btn-default" onClick={this.updateRow}><FontAwesomeIcon icon={faSave} /></button></td>
+                <td><button title="Save" className="btn btn-sm btn-default" onClick={this.updateRow} style={{border: "1px solid black"}}><FontAwesomeIcon icon={faSave} /></button></td>
                 <td>{id}</td>
                 <td><input defaultValue={name} ref={nameInput => this.nameInput = nameInput} type={String}></input></td>
                 <td><input defaultValue={cost} ref={costInput => this.costInput = costInput} type={Number}></input></td>
-                <td><button className="btn btn-sm btn-danger" onClick={this.deleteRow}><FontAwesomeIcon icon={faTrash} /></button></td>
+                <td><button title="Remove" className="btn btn-sm btn-danger" onClick={this.deleteRow}><FontAwesomeIcon icon={faTrash} /></button></td>
             </tr>
         );
     }
