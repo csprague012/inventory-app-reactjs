@@ -120,17 +120,17 @@ class App extends Component{
       return (        
         <div className="container">                    
           <form className="form-group">
-            <input placeholder="Item Name" type={String} ref={searchInput => this.searchInput = searchInput} style={{display: "inline-block", paddingBottom:"4px"}} />
+            <input placeholder="Item Name" type={String} ref={searchInput => this.searchInput = searchInput} style={{paddingBottom:"4px"}} />
             <button className="btn btn-sm btn-info" onClick={this.getMaxPrice}>Get Max Cost</button>
-            <button className="btn btn-sm btn-default" style={{border: "1px solid black", float: "right"}} onClick={this.getAllMaxPrice}>All Max Costs</button>            
+            <button className="btn btn-sm btn-default" style={{border: "1px solid black"}} onClick={this.getAllMaxPrice}>All Max Costs</button>            
           </form>
             <table className="table table-striped" style={{tableLayout: "fixed"}}>
               <thead>
               <tr>
                 <th style={{width: "5%"}}><button className="btn btn-sm btn-success" title="Add" onClick={this.addRow}><FontAwesomeIcon icon={faPlus} title="Add"/></button></th>              
-                <th style={{width: "5%"}}>Id</th>
+                <th style={{width: "10%"}}>Id</th>
                 <th style={{width: "40%"}}>Name</th>
-                <th style={{width: "40%"}}>Cost</th>
+                <th style={{width: "35%"}}>Cost</th>
                 <th style={{width: "5%"}}><button className="btn btn-sm btn-primary" title="Refresh" onClick={this.init}><FontAwesomeIcon icon={faSync} title="Refresh"/></button></th>
               </tr>
               </thead>
