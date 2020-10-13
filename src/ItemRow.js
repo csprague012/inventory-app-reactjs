@@ -16,6 +16,7 @@ class ItemRow extends Component {
     deleteRow() {
         const {id} = this.props;
         this.props.deleteRow(id);
+        console.log("deleted: " + id);
     }
 
     render() {
